@@ -87,8 +87,9 @@ Use it for cleanup or final setup logic. Like teleporting players at the map
 
 - `$(start_pos_x)`  `$(start_pos_y)`  `$(start_pos_z)`
 - `$(x)` `$(y)` `$(z)` (map size)  
-    You can use this formula to get the center of the map `map_center_x`=`$(start_pos_x)`+ `$(x)/2`  
-                                                          `map_center_y`=`$(start_pos_y)`+ `$(y)/2`  
-                                                          `map_center_z`=`$(start_pos_z)`+ `$(z)/2`  
+    You can use this formula to get the center of the map  
+    `map_center_x`=`$(start_pos_x)`+ `$(x)/2`  
+    `map_center_y`=`$(start_pos_y)`+ `$(y)/2`  
+    `map_center_z`=`$(start_pos_z)`+ `$(z)/2`  
 - `$(dimension)` (the dimension where the map was pasted in)
 - `$(name)` (map name)
