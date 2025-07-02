@@ -73,10 +73,6 @@ execute positioned `$(current_pos_x) $(current_pos_y) $(current_pos_z)` run fill
 ### 📦 `on_paste.mcfunction`
 
 Runs when a section is **pasted**.  
-Use to:
-- Spawn mobs
-- Prepare loot
-- Trigger redstone, etc.
 
 Uses the same macros as `on_clear`.
 
@@ -85,5 +81,13 @@ Uses the same macros as `on_clear`.
 ### ✅ `on_finish.mcfunction`
 
 Runs **after** the entire pasting or clearing process completes.  
-Use it for cleanup or final setup logic.
+Use it for cleanup or final setup logic. Like teleporting players at the map
 
+#Macros provided:
+
+- `$(start_pos_x)`  
+- `$(start_pos_y)`  
+- `$(start_pos_z)`
+- `$(x)` `$(y)` `$(z)` (map size)
+- `$(dimension)` (the dimension where the map was pasted in)
+- `$(name)` (map name)
