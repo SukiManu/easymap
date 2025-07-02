@@ -3,34 +3,21 @@
 
 # 📘 EasyMap Guide
 
-This guide explains how to use the [EasyMap](http://minecraft.tools/) datapack to select, save, and paste map structures within Minecraft worlds.
+This guide explains how to use the easymap datapack to select, save, and paste map structures within Minecraft worlds.
+Useful for minigames where there's a lot of destruction and the map needs reset.
 
 ---
 
 ## 📍 1. Making a Map Selection
 
 1. Give yourself the selection wand:  
-/function easymap:give_wand
-
-sql
-Copy
-Edit
+/function easymap:give__wand
 
 2. Right-click on a block to set the **first corner** of the selection.  
-✅ You should see chat feedback like:
-Pos1 [x, y, z]
-
-css
-Copy
-Edit
+✅ You should see chat: Pos1 [x, y, z]
 
 3. Move to the **opposite corner** and right-click again.  
-✅ You should see:
-Pos2 [x, y, z]
-
-yaml
-Copy
-Edit
+✅ You should see in chat: Pos2 [x, y, z]
 
 ---
 
@@ -39,19 +26,11 @@ Edit
 Once the corners are selected, run:
 /function easymap:save
 
-kotlin
-Copy
-Edit
-
 - The selection data is saved in:  
   `easymap:data selection`
 
 You can also use a more advanced save command:
-/function easymap:zinternal/save/start {name:"map_name",structure_name:"your_structure_name"}
-
-yaml
-Copy
-Edit
+/function easymap:zinternal/save/start {name:"map__name",structure__name:"your__structure__name"}
 
 ---
 
@@ -62,23 +41,11 @@ EasyMap allows pasting maps **anywhere**, including unloaded chunks and **non-va
 - To paste at your feet:
 /function easymap:paste
 
-css
-Copy
-Edit
-
 - To paste at a specific location and dimension:
 /execute positioned <x> <y> <z> in <dimension> run function easymap:paste
 
-makefile
-Copy
-Edit
-
 **Example:**
-/execute positioned 420 40 420 in the_end run function easymap:paste
-
-yaml
-Copy
-Edit
+/execute positioned 420 40 420 in the__end run function easymap:paste
 
 ---
 
@@ -87,26 +54,22 @@ Edit
 Located in:  
 `/data/easymap/functions/hook/`
 
-### 🔄 `on_clear.mcfunction`
+### 🔄 `on__clear.mcfunction`
 
 Runs when a section is **cleared** at the start of the process.
 
 #### Available Macros:
-- `$(current_pos_x)`  
-- `$(current_pos_y)`  
-- `$(current_pos_z)`
+- `$(current__pos__x)`  
+- `$(current__pos__y)`  
+- `$(current__pos__z)`
 - `$(dx)` `$(dy)` `$(dz)` (section size)
 
 #### Example:
-execute positioned $(current_pos_x) $(current_pos_y) $(current_pos_z) run fill ~ ~ ~ ~$(dx) ~ ~$(dz) stone
-
-yaml
-Copy
-Edit
+execute positioned `$(current__pos__x) $(current__pos__y) $(current__pos__z)` run fill ~ ~ ~ ~`$(dx)` ~ ~`$(dz)` stone
 
 ---
 
-### 📦 `on_paste.mcfunction`
+### 📦 `on__paste.mcfunction`
 
 Runs when a section is **pasted**.  
 Use to:
@@ -114,11 +77,11 @@ Use to:
 - Prepare loot
 - Trigger redstone, etc.
 
-Uses the same macros as `on_clear`.
+Uses the same macros as `on__clear`.
 
 ---
 
-### ✅ `on_finish.mcfunction`
+### ✅ `on__finish.mcfunction`
 
 Runs **after** the entire pasting or clearing process completes.  
 Use it for cleanup or final setup logic.
