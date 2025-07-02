@@ -1,0 +1,2 @@
+execute unless data storage easymap:data selection run return run tellraw @a[tag=is_admin] {"text":"[ERROR] No selection made. Click here to give yourself a wand",click_event:{action:"run_command",command:"/function easymap:give_wand"},color:"red"}
+function easymap:zinternal/save/show_dialog

@@ -1,0 +1,43 @@
+{
+	"type": "minecraft:multi_action",
+	"external_title": "Guide",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": [
+			{
+				"text": "EasyMap Guide\n\n",
+				"color": "white",
+				"bold": true
+			},
+			{
+				"text": "Page3"
+			}
+		]
+	},
+	"inputs": [],
+	"can_close_with_escape": true,
+	"pause": false,
+	"after_action": "close",
+	"title": "",
+	"exit_action": {
+		"label": "Close"
+	},
+	"actions": [
+		{
+			"label": "⬅",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide/page1"
+			}
+		},
+		{
+			"label": "➡",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide/page3"
+			}
+		}
+	]
+}

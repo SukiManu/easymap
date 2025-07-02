@@ -1,0 +1,1 @@
+$execute in $(dimension) run forceload remove 22517732 22517732

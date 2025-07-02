@@ -1,0 +1,45 @@
+{
+	"type": "minecraft:multi_action",
+	"external_title": "Guide",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": [
+			{
+				"text": "EasyMap Guide\n\n",
+				"color": "white",
+				"bold": true
+			},
+            {"text":"Making a map selection:\n1. type /function easymap:give_wand\n\n2. Right click on a block to set first corner of the selection.\nMake sure you get the feedback in chat: ","bold":false},
+            {"text":"Pos1","color":"green","bold":false},{"text":":[x,y,z]\n ","color":"white","bold":false},
+            {"text":"\n3. Go on the other corner of the map and right click again\nMake sure you get the feedback in chat: ","bold":false},
+            {"text":"Pos2","color":"green","bold":false},
+            {"text":":[x,y,z]\n","color":"white","bold":false}
+		]
+	},
+	"inputs": [],
+	"can_close_with_escape": true,
+	"pause": false,
+	"after_action": "close",
+	"title": "",
+	"exit_action": {
+		"label": "Close"
+	},
+	"actions": [
+		{
+			"label": "⬅",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide"
+			}
+		},
+		{
+			"label": "➡",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide/page2"
+			}
+		}
+	]
+}

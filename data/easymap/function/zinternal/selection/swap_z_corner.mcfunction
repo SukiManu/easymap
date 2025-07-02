@@ -1,0 +1,2 @@
+execute store result storage easymap:data selection.pos1.z int 1.0 run scoreboard players operation #corner1_z easymap = #corner0_z easymap
+execute store result storage easymap:data selection.pos0.z int 1.0 run scoreboard players operation #corner0_z easymap = #copy easymap

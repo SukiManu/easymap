@@ -1,0 +1,44 @@
+{
+	"type": "minecraft:multi_action",
+	"external_title": "Guide",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": [
+			{
+				"text": "EasyMap Guide\n\n",
+				"color": "white",
+				"bold": true
+			},
+			{
+				"text": "\n1. Making a map selection\n\n2. Saving a selection\n\n3. Pasting the saved map in the world\n\n4. Hook functions",
+                "bold":false
+            }
+		]
+	},
+	"inputs": [],
+	"can_close_with_escape": true,
+	"pause": false,
+	"after_action": "close",
+	"title": "",
+	"exit_action": {
+		"label": "Close"
+	},
+	"actions": [
+		{
+			"label": "⬅",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide/page1"
+			}
+		},
+		{
+			"label": "➡",
+			"width": 20,
+			"action": {
+				"type": "show_dialog",
+				"dialog": "easymap:guide/page1"
+			}
+		}
+	]
+}

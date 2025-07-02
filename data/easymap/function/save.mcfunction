@@ -1,0 +1,1 @@
+function easymap:zinternal/save/try_show_dialog

@@ -1,0 +1,14 @@
+# execute if score #ztemp easymap matches ..47 run scoreboard players set #ztemp easymap 0
+# execute if score #ztemp easymap matches 48.. run scoreboard players remove #ztemp easymap 48
+scoreboard players remove #ztemp easymap 48
+
+data modify storage easymap:data args.current_pos_x set from storage easymap:data args.start_pos_x
+
+#data modify storage easymap:data args.old_pos_z set from storage easymap:data args.current_pos_z
+execute store result score $temp temp run data get storage easymap:data args.current_pos_z 10
+scoreboard players add $temp temp 480
+
+data modify storage easymap:data args.old_pos_z set from storage easymap:data args.current_pos_z
+execute store result storage easymap:data args.current_pos_z int 0.1 run scoreboard players get $temp temp
+
+execute run scoreboard players operation #xtemp easymap = #size.x easymap

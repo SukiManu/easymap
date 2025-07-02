@@ -1,0 +1,1 @@
+dialog show @s easymap:start_save

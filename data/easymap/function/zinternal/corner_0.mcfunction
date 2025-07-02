@@ -1,0 +1,4 @@
+execute store result storage easymap:data selection.pos0.x int 1.0 store result score #corner0_x easymap run data get entity @s Pos[0]
+execute store result storage easymap:data selection.pos0.y int 1.0 store result score #corner0_y easymap run data get entity @s Pos[1]
+execute store result storage easymap:data selection.pos0.z int 1.0 store result score #corner0_z easymap run data get entity @s Pos[2]
+tellraw @a[tag=this] [{"text":"Pos1:[","color":"green"},{"score":{"name": "#corner0_x","objective": "easymap"},"color":"white"},{"text":", ","color":"gray"},{"score":{"name": "#corner0_y","objective": "easymap"},"color":"white"},{"text":", ","color":"gray"},{"score":{"name": "#corner0_z","objective": "easymap"},"color":"white"},{"text":"]","color":"green"}]

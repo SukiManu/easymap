@@ -1,0 +1,1 @@
+function easymap:zinternal/paste/from_history_recent

@@ -1,0 +1,2 @@
+tellraw @s "Right Click on a block to place the selection corners"
+item replace entity @s weapon.mainhand with angler_pottery_sherd[minecraft:item_model="minecraft:wooden_axe",minecraft:consumable={consume_seconds:99999999},item_name="easymap Wand",lore=[{"text":"Righ click on a block to place selection corner.","color":"green","italic":false}]]

@@ -1,0 +1,61 @@
+{
+	"type": "minecraft:multi_action",
+	"external_title": "Character Menu",
+	"body": {
+		"type": "minecraft:plain_message",
+		"contents": {
+			"text": "Saving as. . .",
+			"color": "#dcbf8f",
+			"shadow_color": 9602674,
+			"bold": false,
+			"underlined": false
+		}
+	},
+	"inputs": [
+		{
+			"type": "minecraft:text",
+			"key": "map_name",
+			"label": {
+                "text":"Map Name( max 30 characters)",
+            	"hover_event": {
+				"action": "show_text",
+				"value": "Can be left empty"
+				}
+            },
+			"label_visible": true,
+			"max_length": 30,
+            "initial":""
+		},
+		{
+			"type": "minecraft:text",
+			"key": "map_id",
+			"label": {
+				"text": "Structure Name",
+				"hover_event": {
+					"action": "show_text",
+					"value": "Example: minecraft:my_first_map\nmy_namespace:my_second_map"
+				}
+			},
+			"max_length": 30
+		}
+	],
+	"can_close_with_escape": true,
+	"pause": true,
+	"after_action": "close",
+	"title": "",
+	"exit_action": {
+		"label": "Cancel",
+		"width": 40
+	},
+	"actions": [
+		{
+			"label": "Confirm",
+			"tooltip": "Once you press the button a hearth of the sea with the name \"NEXT\" will appear in your inventory. Press F on it to start saving the structure.",
+			"width": 200,
+			"action": {
+				"type": "dynamic/run_command",
+				"template": "/function easymap:zinternal/save/start {name:\"$(map_name)\",structure_name:\"$(map_id)\"}"
+			}
+		}
+	]
+}
