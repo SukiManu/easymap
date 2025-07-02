@@ -12,7 +12,7 @@
 ## 📍 1. Making a Map Selection
 
 1. Give yourself the selection wand:  
-/function easymap:give__wand
+/function easymap:give_wand
 
 2. Right-click on a block to set the **first corner** of the selection.  
 ✅ You should see chat: Pos1 [x, y, z]
@@ -31,7 +31,7 @@ Once the corners are selected, run:
   `easymap:data selection`
 
 You can also use a more advanced save command:
-/function easymap:zinternal/save/start {name:"map__name",structure__name:"your__structure__name"}
+/function easymap:zinternal/save/start {name:"map_name",structure_name:"your_structure_name"}
 
 ---
 
@@ -46,7 +46,7 @@ EasyMap allows pasting maps **anywhere**, including unloaded chunks and **non-va
 /execute positioned <x> <y> <z> in <dimension> run function easymap:paste
 
 **Example:**
-/execute positioned 420 40 420 in the__end run function easymap:paste
+/execute positioned 420 40 420 in the_end run function easymap:paste
 
 ---
 
@@ -55,22 +55,22 @@ EasyMap allows pasting maps **anywhere**, including unloaded chunks and **non-va
 Located in:  
 `/data/easymap/functions/hook/`
 
-### 🔄 `on__clear.mcfunction`
+### 🔄 `on_clear.mcfunction`
 
 Runs when a section is **cleared** at the start of the process.
 
 #### Available Macros:
-- `$(current__pos__x)`  
-- `$(current__pos__y)`  
-- `$(current__pos__z)`
+- `$(current_pos_x)`  
+- `$(current_pos_y)`  
+- `$(current_pos_z)`
 - `$(dx)` `$(dy)` `$(dz)` (section size)
 
 #### Example:
-execute positioned `$(current__pos__x) $(current__pos__y) $(current__pos__z)` run fill ~ ~ ~ ~`$(dx)` ~ ~`$(dz)` stone
+execute positioned `$(current_pos_x) $(current_pos_y) $(current_pos_z)` run fill ~ ~ ~ ~`$(dx)` ~ ~`$(dz)` stone
 
 ---
 
-### 📦 `on__paste.mcfunction`
+### 📦 `on_paste.mcfunction`
 
 Runs when a section is **pasted**.  
 Use to:
@@ -78,11 +78,11 @@ Use to:
 - Prepare loot
 - Trigger redstone, etc.
 
-Uses the same macros as `on__clear`.
+Uses the same macros as `on_clear`.
 
 ---
 
-### ✅ `on__finish.mcfunction`
+### ✅ `on_finish.mcfunction`
 
 Runs **after** the entire pasting or clearing process completes.  
 Use it for cleanup or final setup logic.
