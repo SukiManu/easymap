@@ -3,8 +3,9 @@
 
 # 📘 EasyMap Guide
 
-This guide explains how to use the easymap datapack to select, save, and paste map structures within Minecraft worlds.
-Useful for minigames where there's a lot of destruction and the map needs reset.
+## This guide explains how to use the easymap datapack to select, save, and paste map structures within Minecraft worlds.
+
+## Useful for minigames where there's a lot of destruction and the map needs reset.
 
 ---
 
