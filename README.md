@@ -1,14 +1,14 @@
 # easymap
  An easy way to save and paste relatively small maps in a world.
-
+ ## Useful for minigames where there's a lot of destruction and the map needs reset.  
+   I made this datapack for one of my minigames where I needed to load many maps every time a new game was started.  
+   This datapack will forceload 16 chunks while it's pasting/saving/clearing map and is required that there are no other datapacks that do /forceload remove all. All forceload chunks will be removed after process is completed.
+   
 # 📘 EasyMap Guide
 
 ## This guide explains how to use the easymap datapack to select, save, and paste map structures within Minecraft worlds.
 
-## Useful for minigames where there's a lot of destruction and the map needs reset.  
-   I made this datapack for one of my minigames where I needed to load many maps every time a new game was started.  
-   This datapack will forceload 16 chunks while it's pasting/saving/clearing map and is required that there are no other datapacks that do /forceload remove all. All forceload chunks will be removed after process is completed.
-   
+
 ---
 
 ## 📍 1. Making a Map Selection
