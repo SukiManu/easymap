@@ -1,1 +1,1 @@
-function easymap:clear
+#function easymap:clear

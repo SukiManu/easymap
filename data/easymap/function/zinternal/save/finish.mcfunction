@@ -10,4 +10,4 @@ data remove storage easymap:data args
 scoreboard players reset $save easymap
 scoreboard players reset $progress
 scoreboard players reset $skip_all
-bossbar set progress players
+bossbar set easymap:progress players

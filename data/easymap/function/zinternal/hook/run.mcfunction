@@ -1,0 +1,3 @@
+$$(command)
+
+return -1

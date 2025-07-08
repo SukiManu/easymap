@@ -1,0 +1,2 @@
+$execute store success score $success easymap in $(dimension) positioned $(x) 0 $(z) run forceload remove ~ ~ ~47 ~47
+$execute if score $success easymap matches 1 run tellraw @a[tag=is_admin] {"text":"[W] Unloaded chunks found at $(x) $(z). Datapack may not run properly.","color":"gray"}

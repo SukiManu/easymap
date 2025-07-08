@@ -6,7 +6,7 @@ scoreboard players set #48 easymap 48
 scoreboard players set #-1 easymap -1
 scoreboard players set #2 easymap 2
 scoreboard objectives add easymap.use_wand minecraft.used:carrot_on_a_stick
-bossbar add progress "Progress"
+bossbar add easymap:progress "Progress"
 
 tellraw @a "easymap Datapack loaded!"
-give @a written_book[item_name={"text":"easymap Guide Book","color":"green"}]
+function easymap:zinternal/utilities/give_guid_book

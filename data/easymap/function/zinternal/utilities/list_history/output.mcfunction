@@ -1,0 +1,1 @@
+$tellraw @a ["$(i). ",{"nbt":"list[$(i)].name","storage": "easymap:maps"},{"text":"[$(start_pos_x), $(start_pos_y),$(start_pos_z)]"},{"text":" [Clear]","click_event": {"action": "run_command","command": "/function easymap:zinternal/clear/start_with_index {i:$(i)}"},"color": "gold","hover_event": {"action": "show_text","value": "Will start removing this paste!"}}]

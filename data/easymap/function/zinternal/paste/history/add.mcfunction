@@ -15,4 +15,4 @@ data modify storage easymap:data history_data prepend from storage easymap:temp 
 data remove storage easymap:temp history_data
 
 execute store result score #length easymap run data get storage easymap:data history_data
-execute if score #length temp matches 10.. run data remove storage easymap:data history_data[-1]
+execute if score #length easymap matches 10.. run data remove storage easymap:data history_data[-1]

@@ -15,7 +15,7 @@ function easymap:zinternal/paste/history/add
 
 function easymap:zinternal/run_init
 
-execute store result bossbar progress max run scoreboard players get $max temp
-bossbar set progress players @a
-bossbar set progress name {"text":"Pasting map","color":"gray"}
+execute store result bossbar easymap:progress max run scoreboard players get $max temp
+bossbar set easymap:progress players @a
+bossbar set easymap:progress name {"text":"Pasting map","color":"gray"}
 scoreboard players set $progress easymap 0

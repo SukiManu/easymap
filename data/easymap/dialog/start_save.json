@@ -50,7 +50,7 @@
 	"actions": [
 		{
 			"label": "Confirm",
-			"tooltip": "Once you press the button a hearth of the sea with the name \"NEXT\" will appear in your inventory. Press F on it to start saving the structure.",
+			"tooltip": "Once you press the button a Netherite Upgrade Template with the name \"NEXT\" will appear in your inventory. Press F on it right click the structure_block and press SAVE.",
 			"width": 200,
 			"action": {
 				"type": "dynamic/run_command",

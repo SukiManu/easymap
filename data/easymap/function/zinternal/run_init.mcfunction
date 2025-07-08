@@ -23,7 +23,7 @@ scoreboard players operation $temp0 temp %= #48 easymap
 execute unless score $temp0 temp matches 0 run scoreboard players add $temp1 temp 48
 scoreboard players operation $temp1 temp /= #48 easymap
 scoreboard players operation $max temp *= $temp1 temp
-execute store result bossbar progress max run scoreboard players get $max temp
+execute store result bossbar easymap:progress max run scoreboard players get $max temp
 
 scoreboard players operation #xtemp easymap = #size.x easymap
 scoreboard players operation #ytemp easymap = #size.y easymap

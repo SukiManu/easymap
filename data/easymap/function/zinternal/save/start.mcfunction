@@ -7,13 +7,13 @@ data remove storage easymap:data args
 
 $data modify storage easymap:data args.structure_name set value "$(structure_name)"
 execute if data storage easymap:data args{structure_name:""} run return run tellraw @s {"text":"[ERROR] Structure name not provided.","color":"red"}
-$data modify storage easymap:data args.name set value "$(structure_name)"
+$data modify storage easymap:data args.name set value "$(name)"
 execute if data storage easymap:data args{name:""} run tellraw @s {"text":"[Warning] Map name not provided.","color":"yellow"}
 execute unless data storage easymap:data selection run return 0
 data modify storage easymap:data args.dimension set from storage easymap:data selection.dimension
 
 tag @s add saving
-item replace entity @s weapon.mainhand with minecraft:heart_of_the_sea[custom_data={save:true}]
+item replace entity @s weapon.mainhand with minecraft:heart_of_the_sea[custom_data={save:true},item_model="minecraft:netherite_upgrade_smithing_template"]
 scoreboard players set $watchdog_timer easymap -100
 
 scoreboard players set $save easymap 1
@@ -47,19 +47,19 @@ scoreboard players operation $temp0 temp %= #48 easymap
 execute unless score $temp0 temp matches 0 run scoreboard players add $temp1 temp 48
 scoreboard players operation $temp1 temp /= #48 easymap
 scoreboard players operation $max temp *= $temp1 temp
-execute store result bossbar progress max run scoreboard players get $max temp
+execute store result bossbar easymap:progress max run scoreboard players get $max temp
 
 scoreboard players operation #xtemp easymap = #size.x easymap
 scoreboard players operation #ytemp easymap = #size.y easymap
 scoreboard players operation #ztemp easymap = #size.z easymap
 
-execute store result bossbar progress max run scoreboard players get $max temp
-bossbar set progress players @a
-bossbar set progress name {"text":"Saving Map. . .","color":"gray"}
+execute store result bossbar easymap:progress max run scoreboard players get $max temp
+bossbar set easymap:progress players @a
+bossbar set easymap:progress name {"text":"Saving Map. . .","color":"gray"}
 scoreboard players set $progress easymap 0
 
 $data modify storage easymap:data args.structure_name set value "$(structure_name)"
-$data modify storage easymap:data args.name set value "$(structure_name)"
+$data modify storage easymap:data args.name set value "$(name)"
 
 data modify storage easymap:data args.id set value 0
 scoreboard players set #id easymap 0

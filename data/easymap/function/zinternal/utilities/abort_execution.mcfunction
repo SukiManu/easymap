@@ -1,4 +1,4 @@
-bossbar set minecraft:progress players
+bossbar set easymap:progress players
 scoreboard players reset $run easymap
 scoreboard players reset $paste easymap
 scoreboard players reset $clear easymap
@@ -9,3 +9,5 @@ kill @e[type=marker,tag=easymap.dimension_tracker]
 forceload remove 22517732 22517732
 execute if data storage easymap:data map_data.dimension run function easymap:zinternal/remove_dimension_tracker with storage easymap:data map_data
 tellraw @a[tag=is_admin] {"text":"Process aborted!","color":"gold"}
+scoreboard players set $wait_for_save easymap 0
+function easymap:zinternal/force_loading/deallocate/for_loop

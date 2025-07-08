@@ -9,6 +9,11 @@
 #                $(current_pos_x) $(current_pos_y) $(current_pos_z) 
 #
 #Map size: x:$(x) y:$(y) z:$(z)
+#Dimension: $(dimension)
+#All macros are stored in >>easymap:data args<<
+
 
 #example:
 #   function my_datapack:spawn_enemies_on_map
+
+function easymap:zinternal/hook/paste/start
