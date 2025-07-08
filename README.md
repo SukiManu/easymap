@@ -50,9 +50,14 @@ EasyMap allows pasting maps **anywhere**, including unloaded chunks and **non-va
 **Example:**
 /execute positioned 420 40 420 in the_end run function easymap:paste
 
+## :calendar: 4. Paste History
+When a map is pasted the starting position, dimension and size is stored in easymap:data history_data as a list.  
+The list can store up to 10 pasted structures, and will remove the oldest one and add the most recent one if the list exceeds 10.  
+You can use function:remove_from_history_last to clear the latest paste.
+
 ---
 
-## 🧩 4. Hook Functions
+## 🧩 5. Hook Functions
 
 Located in:  
 `/data/easymap/functions/hook/`
@@ -64,8 +69,8 @@ Note: If your hook command includes macros it will fail to run.
 ### 🔄 `on_clear.mcfunction`
 
 Runs when a section is **cleared** at the start of the process.
+#### Macros are stored in easymap:data args
 #### Available Macros:
-#Macros are stored in easymap:data args
 
 - `$(current_pos_x)`  
 - `$(current_pos_y)`  
@@ -78,7 +83,7 @@ execute positioned `$(current_pos_x) $(current_pos_y) $(current_pos_z)` run fill
 ---
 
 ### 📦 `on_paste.mcfunction`
-#Macros are stored in easymap:data args
+#### Macros are stored in easymap:data args
 
 Runs when a section is **pasted**.  
 
@@ -90,8 +95,8 @@ Uses the same macros as `on_clear`.
 
 Runs **after** the entire pasting or clearing process completes.  
 Use it for cleanup or final setup logic. Like teleporting players at the map
-#Macros are stored in easymap:data args
-#Macros provided:
+#### Macros are stored in easymap:data args
+#### Macros provided:
 
 - `$(start_pos_x)`  `$(start_pos_y)`  `$(start_pos_z)`
 - `$(x)` `$(y)` `$(z)` (map size)  
@@ -101,6 +106,11 @@ Use it for cleanup or final setup logic. Like teleporting players at the map
     `map_center_z`=`$(start_pos_z)`+ `$(z)/2`  
 - `$(dimension)` (the dimension where the map was pasted in)
 - `$(name)` (map name)
+
+### Utilities?
+
+function easymap:list_all_maps lists all saved maps.
+function easymap:list_history list history data.
 
 ### Debugging
 If you want to see the errors, warnings, and what the datapack is doing make sure to give yourself `is_admin` tag.
